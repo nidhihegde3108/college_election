@@ -3,6 +3,14 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<style>
+		table{
+			color:#00b4d8;
+		}
+		th{
+			color:#00b4d8;
+		}
+		</style>
 </head>
 <body>
      <!-- Required meta tags -->
@@ -49,7 +57,7 @@
             </div>
           </nav>
         </header>
-	<section style="padding-top:50px; padding-bottom:50px">
+	<section style="padding-top:50px; padding-bottom:50px color:#00b4d8;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12" >
@@ -107,8 +115,10 @@
 			<td>";
 			if($row['approve_status']==2){
 				echo '<a href="change_status.php?rollno='.$cid.'&status=1" class="btn btn-success">Approve</a>';
+				echo '<a href="insert_Candidates.php?txtRollNo='.$cid.'&status=1"></a>';
 			}else if($row['approve_status']==1){
 				echo '<a href="change_status.php?rollno='.$cid.'&status=2" class="btn btn-danger">Reject</a>';
+				echo '<a href="insert_Candidates.php?txtRollNo='.$cid.'&status=2"></a>';
 			}else if($row['approve_status']==0){
 				echo '<a href="change_status.php?rollno='.$cid.'&status=1" class="btn btn-success">Approve</a>';
 				echo '<a href="change_status.php?rollno='.$cid.'&status=2" class="btn btn-danger">Reject</a>';

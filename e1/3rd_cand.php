@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1');
+   define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');
@@ -13,7 +13,6 @@
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +74,6 @@
             <li class="nav-item" >
               <a class="nav-link" href="about.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">About</a>
             </li>
-
             <li class="nav-item" >
                   <a class="nav-link" href="logout.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Logout</a>
                 </li>
@@ -88,10 +86,12 @@
          
          <div class="row">
            <div class="col-md-12" >
-          
-           <h1 class="text-center" style="margin-bottom: 10px;">President Candidates</h1>
-          
+           <h1 class="text-center">
+            
+           <p class="text-center" style="margin-bottom: 50px;">Secretary Candidates</p>
          </div>
+        
+                   
          <?php 
     
     $sql1="SELECT * FROM student_details";
@@ -106,11 +106,10 @@
       }
     }
       ?>
-         <?php 
-   
+      <?php
       
 
-   $sql = "select * from candidates where approve_status=1 and pname='president'";
+   $sql = "select * from candidates where approve_status=1 and pname='secretary'";
    include("dbConnect.php");
     
        $result= $pdo->query($sql);
@@ -126,7 +125,7 @@
                   <div class="card-body">
                     <h2 class="card-title"><?php echo $row['name']; ?></h2>
                     <p class="card-text"><?php echo $row['branch']; ?></p>
-                    <a href="confirmation.php"  class="btn btn-primary">Vote Now</a>
+                    <a href="confirmation_3.php" class="btn btn-primary">Vote Now</a>
                   </div>
                 </div>
               </div>
@@ -144,7 +143,7 @@
             <div class="col-md-6">
               <hr>
               <div class="Footer">
-              <ul style="display: flex;">
+                <ul style="display: flex;">
                   <li style="list-style: none; padding: 10px; "><a href="index.php" style="text-decoration: none; color: #a517ba;">Home</a></li>
                   <li style="list-style: none; padding: 10px; "><a href="about.php" style="text-decoration: none; color: #a517ba;">About</a></li>
                   </ul>

@@ -1,10 +1,11 @@
 <?php
+
 session_start();
 
 // form data received
 
 $username = $_REQUEST['username'];
-$password = md5($_REQUEST['password']);
+$password = $_REQUEST['password'];
 
 include('dbConnect.php');
 
@@ -18,9 +19,9 @@ if($stmt->rowCount()>0){
 	$row = $stmt->fetch();
 	if($row['password']==$password){
 		
-		$_SESSION['aid'] = $row['aid'];
+		// $_SESSION['aid'] = $row['aid'];
 		$_SESSION['admin_id'] = $username;
-		$_SESSION['aname']  = $row['aname'];
+		// $_SESSION['aname']  = $row['aname'];
 		header("location:result.php");
 
 	}else{

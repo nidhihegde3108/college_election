@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1');
+   define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');
@@ -92,13 +92,13 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
             <a href="insert_Candidates.php"><button style="margin-top:80px;" class="btn-special-2">President</button></a>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
             <a href="insert_Candidate_2nd.php"><button style="margin-top:80px;" class="btn-special-2">Vice President </button></a>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
             <a href="insert_Candidate_3rd.php"><button style="margin-top:80px; " class="btn-special-2">Secretary </button></a>
             </div>
         </div>
@@ -109,4 +109,4 @@
 </html>
 <?php
 include("footer.html");
-?>
+?> 

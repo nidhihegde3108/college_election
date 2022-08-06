@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1');
+    define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');
@@ -37,7 +37,7 @@
     <div class="container-fluid" id="cont-3">
         <header id="nav-bar">
           <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand" href="index.php"  style="color: white; font-weight: 600; margin-top: 15px;">GO VOTE</a>
+            <a class="navbar-brand" href="index.php" style="color: white; font-weight: 600; margin-top: 15px;">GO VOTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon" style="color: white;"></span>
             </button>
@@ -50,10 +50,12 @@
                   <a class="nav-link" href="year.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Candidate</a>
                 </li>
               
-               
+                
+              
                 <li class="nav-item" >
                   <a class="nav-link" href="about.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">About</a>
                 </li>
+
                 <li class="nav-item" >
                   <a class="nav-link" href="logout.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Logout</a>
                 </li>
@@ -68,7 +70,7 @@
     </section>
     <?php 
 
-    $sql2="SELECT *  FROM position WHERE pid=1002";
+    $sql2="SELECT *  FROM position WHERE pid=1003";
     $res2=mysqli_query($conn,$sql2);
     $count2=mysqli_num_rows($res2);
     if($count2==1)
@@ -80,7 +82,7 @@
     {
       header('location:'.SITEURL.'registration.php');
     }
- 
+
   ?>
     <section id="center">
     <div class="container">
@@ -91,7 +93,7 @@
                 <table>
                 <tr>
                         <td class="td-1">Roll No. :</td>
-                        <td class="td-1"><input   required type="number" style="text-align: left;" name="txtRollNo"></td>
+                        <td class="td-1"><input   required type="number" style="text-align: left;" name="txtRollNo" ></td>
                     </tr>
                     <tr>
                         <td class="td-1">Name :</td>
@@ -111,6 +113,7 @@
                         <td class="td-1">Position :</td>
                         <td class="td-1"><input  required  type="text" style="text-align: left;" name="txtposition" value="<?php echo $pname;?>"></td>
                     </tr>
+                   
                     <tr>
                         <td class="td-1">Candidate :</td>
 					<td class="td-1"><select required name="txtCand">
@@ -119,7 +122,7 @@
    
 
 
-        $sql = "select name from candidates where approve_status=1 and pname='vice president'";
+        $sql = "select name from candidates where approve_status=1 and pname='secretary'";
         include("dbConnect.php");
       
             $stmt=$pdo->prepare($sql);
@@ -154,7 +157,7 @@
         <ul style="display: flex;">
                   <li style="list-style: none; padding: 10px; "><a href="index.php" style="text-decoration: none; color: #a517ba;">Home</a></li>
                   <li style="list-style: none; padding: 10px; "><a href="about.php" style="text-decoration: none; color: #a517ba;">About</a></li>
-                 </ul>
+                  </ul>
         </div>
       </div>
       <div class="col-md-6">

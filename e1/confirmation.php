@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1');
+   define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');

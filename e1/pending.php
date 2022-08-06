@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1');
+   define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');
@@ -13,15 +13,7 @@
 
 
 ?>
-<?php 
-  if(!isset($_SESSION['user']))
-  {
-     $_SESSION['no-login']="<div style='color:black'>Please login  </div>";
-     header('location:'.SITEURL.'login.php');
-  }
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,13 +26,13 @@
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <title></title>
      <style>
-    .fa-check{
+    .fa-clock-o{
     font-size: 80px;
-    color: #27ae60;
+    color: #FF7902;
     font-weight: bold;
     height: 110px;
     width: 110px;
-    border: 1px solid #27ae60;
+    border: 1px solid #FF7902;
     text-align: center;
     padding-top: 13px;
     border-radius: 50%;
@@ -62,18 +54,7 @@
                 <li class="nav-item" >
                   <a class="nav-link" href="index.php" style="color:white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Home</a>
                 </li>
-                <li class="nav-item" >
-                  <a class="nav-link" href="year.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Candidate</a>
-                </li>
-              
-              
-                <li class="nav-item" >
-                  <a class="nav-link" href="about.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">About</a>
-                </li>
-
-                <li class="nav-item" >
-                  <a class="nav-link" href="logout.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Logout</a>
-                </li>
+               
               
               </ul>
             </div>
@@ -83,12 +64,10 @@
                <div class="container">
                    <div class="row">
                        <div class="col-md-12">
-                        <i class="fa fa-check" aria-hidden="true" ></i>
-                        <H1 style="margin-top: 40px;">Successfully Submitted</H1>
+                        <i class="fa fa-clock-o" aria-hidden="true" ></i>
+                        <H1 style="margin-top: 40px;">Request Pending</H1>
                        </div>
-                       <div class="col-md-12">
-                           <p>Go Home Click this Link -><a href="index.php">Click Me</a></p>
-                       </div>
+                       
                    </div>
                </div>
            </section>
@@ -156,5 +135,6 @@
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>    
     <script src="js/bootstrap.min.js"></script>  
+    
 </body>
-</html>
+</html> 

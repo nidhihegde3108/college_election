@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1/');
+   define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');
@@ -48,7 +48,7 @@
       .slideUpBtn {
     padding: 12px 24px;
     background-color: transparent;
-    border: 2px solid hsl(243, 80%, 62%);
+    border: 2px solid #00b4d8;
     border-radius: 6px;
     position: relative;
     overflow: hidden;
@@ -104,6 +104,16 @@
     color: hsl(222, 100%, 95%);
     transform: translateY(0);
 }
+.navbar {
+    background-image: linear-gradient(to right, #191919,#000000);
+    padding: 0;
+    position: sticky;
+    top:0;
+}
+
+button{
+  color:cyan;
+}
     </style>
 <!-- End Internal CSS -->
 </head>
@@ -111,29 +121,30 @@
 
 <!------------------  Navbar Section ------------------>
 
-<div class="container-fluid" id="cont-3">
-<header id="nav-bar">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <a class="navbar-brand" href=index.php  style="color: white; font-weight: 600; margin-top: 15px;">GO VOTE</a>
+<div class="container-fluid " id="cont-3">
+ 
+<header id="nav-bar" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+    <a class="navbar-brand" href=index.php  style="color: #00b4d8; font-weight: 600; margin-top: 15px;">GO VOTE</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="color: white;"></span>
+      <span class="navbar-toggler-icon" style="color: #00b4d8;"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto animate__animated animate__bounceInDown" style="padding-right: 50px;">
         <li class="nav-item" >
-          <a class="nav-link" href="index.php" style="color:white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Home</a>
+          <a class="nav-link" href="index.php" style="color:#00b4d8; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Home</a>
         </li>
         <li class="nav-item" >
-          <a class="nav-link" href="year.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Candidate</a>
+          <a class="nav-link" href="year.php"  style="color: #00b4d8; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Candidate</a>
         </li>
       
        
       
         <li class="nav-item" >
-          <a class="nav-link" href="about.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">About</a>
+          <a class="nav-link" href="about.php"  style="color: #00b4d8; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">About</a>
         </li>
         <li class="nav-item" >
-          <a class="nav-link" href="logout.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Logout</a>
+          <a class="nav-link" href="logout.php"  style="color: #00b4d8; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Logout</a>
         </li>
       
       </ul>
@@ -163,7 +174,7 @@
 </section>
  <!------------------  Space Section ------------------> 
   
-<section class="space">
+<!-- <section class="space">
   <div class="container">
     <div class="col-md-12">
       <div class="row">
@@ -171,14 +182,14 @@
       </div>
     </div>
 </section>
-</div>
+</div> -->
 
 <!------------------  Candidate Section ------------------>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">     
-      <h1>Online Voting System</h1>
+      <h1 style="color:#00b4d8">Online Voting System</h1>
     </div>
     <div class="col-md-12" style=" width: 100%; ">
       <img src="img/10.svg" alt="" srcset="">
@@ -196,17 +207,17 @@
 <!------------------  About Section ------------------>
 <section>
     <div class="container-fluid" style="margin-top: 50px;">
-      <div class="row" style="background: linear-gradient(to right, #a517ba,#5f1178 );" width="100%">
-        <div class="col-md-12" style="background-image: linear-gradient(to right, #a517ba,#5f1178 ); color: white;">
-          <h1 style="text-align: center; background-image: linear-gradient(to right, #a517ba,#5f1178 ); color: white;"> About Voting</h1>
-          <p> About Voting In Beif</p>
+      <div class="row" style="background: linear-gradient(to right,  #191919,#000000 );" width="100%">
+        <div class="col-md-12" style="background-image: linear-gradient(to right,  #191919,#000000 ); color: white;">
+          <h1 style="text-align: center; background-image: linear-gradient(to right,  #191919,#000000 ); color: #00b4d8;"> About Voting</h1>
+          <p style="color:#00b4d8"> About Voting In Beif</p>
         </div>
         <div class="col-md-6" >
           <img src="img/4.svg" alt="" srcset="" >
         </div>
         <div class="col-md-6" data-aos="fade-left">
-          <h1 style="color: white; margin-top: 40px;" class=" ">About</h1>
-          <p style="color: white;" class=" ">Voting is a method for a group, such as a meeting or an electorate, in order to make a collective decision or express an opinion usually following discussions, debates or election campaigns. Democracies elect holders of high office by voting. Residents of a place represented by an elected official are called "constituents", and those constituents who cast a ballot for their chosen candidate are called "voters". There are different systems for collecting votes, but while many of the systems used in decision-making can also be used as electoral systems, any which cater for proportional representation can only be used in elections.</p>
+          <h1 style="color:#00b4d8; margin-top: 40px;" class=" ">About</h1>
+          <p style="color: #00b4d8;" class=" ">Voting is a method for a group, such as a meeting or an electorate, in order to make a collective decision or express an opinion usually following discussions, debates or election campaigns. Democracies elect holders of high office by voting. Residents of a place represented by an elected official are called "constituents", and those constituents who cast a ballot for their chosen candidate are called "voters". There are different systems for collecting votes, but while many of the systems used in decision-making can also be used as electoral systems, any which cater for proportional representation can only be used in elections.</p>
         </div>
       </div>
       </div>
@@ -214,17 +225,17 @@
 </section>
 <section>
   <div class="container-fluid" style="margin-top: 50px;">
-    <div class="row" style="background: linear-gradient(to right, #a517ba,#5f1178 );" width="100%">
-      <div class="col-md-12" style="background-image: linear-gradient(to right, #a517ba,#5f1178 ); color: white;">
-        <h1 style="text-align: center; background-image: linear-gradient(to right, #a517ba,#5f1178 ); color: white;"> Become Candidate</h1>
+    <div class="row" style="background: linear-gradient(to right, #191919,#000000 );" width="100%">
+      <div class="col-md-12" style="background-image: linear-gradient(to right,  #191919,#000000 ); color: #00b4d8;">
+        <h1 style="text-align: center; background-image: linear-gradient(to right,  #191919,#000000 ); color: #00b4d8;"> Become Candidate</h1>
         <p>Become a Candidate</p>
       </div>
       <div class="col-md-6" >
         <img src="img/11.svg" style="height: 400px;" >
       </div>
       <div class="col-md-6" data-aos="fade-left">
-        <h1 style="color: white; margin-top: 40px; margin-bottom: 40px;" class=" ">Apply</h1>
-        <p style="color: white;" >
+        <h1 style="color: #00b4d8; margin-top: 40px; margin-bottom: 40px;" class=" ">Apply</h1>
+        <p style="color: #00b4d8;" >
           If you want to become a candidate, then you click on the link below, then you will be redirected. In the second
            page, by filling that, you can request for a candidateAfter that, the administrator will approve your request so you can become a candidate.
            </p>
@@ -239,7 +250,7 @@
 
 <!------------------  Footer Section ------------------>
 
-<section>
+<!-- <section>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
@@ -285,7 +296,7 @@
     </div>
   </div>
 </div>
-</section>
+</section> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

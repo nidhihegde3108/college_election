@@ -1,8 +1,8 @@
 <?php
    session_start();
 
-    define('SITEURL','http://localhost/election/');
-    define('LOCALHOST','localhost');
+   define('SITEURL','http://localhost/election/college_election/e1');
+   define('LOCALHOST','localhost:3307');
     define('DB_USERNAME','root');
     define('DB_PASSWORD','');
     define('DB_NAME','voting');
@@ -41,7 +41,16 @@
         <header id="nav-bar">
           <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <a class="navbar-brand" href=welcome.html  style="color: white; font-weight: 600; margin-top: 15px;">GO VOTE</a>
-            
+            <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto animate__animated animate__bounceInDown" style="padding-right: 50px;">
+        <li class="nav-item" >
+          <a class="nav-link" href="index.php" style="color:white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Home</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="year.php"  style="color: white; font-weight: 600; text-align: center; font-size: 18px; margin-top: 20px;  text-transform: capitalize; padding: 20px;">Candidate</a>
+        </li>
+        </ul>
+    </div>
             </div>
           </nav>
         </header>
@@ -65,35 +74,35 @@
     }
   
   ?>
-    <section id="center">
+    <section id="center" style="background-color:black;">
     <div class="container">
         <div class="row">
             <div class="col-md-6" >
-                <h1 style="padding-top: 20px;">Candidate Enroll</h1>
+                <h1 style="padding-top: 20px;color: #00b4d8;">Candidate Enroll</h1>
                 <p style="padding-top: 20px;">Secretary Enroll</p>
                 <form action="process_cand.php" method="post">
                 <table>
                 <tr>
-                        <td class="td-1">Roll No. :</td>
+                        <td class="td-1" style="color: #00b4d8;">Roll No. :</td>
                         <td class="td-1"><input  required type="number" style="text-align: left;" name="txtRollNo" ></td>
                     </tr>
                     <tr>
-                        <td class="td-1">Name :</td>
+                        <td class="td-1" style="color: #00b4d8;">Name :</td>
                         <td class="td-1"><input   requiredtype="text" style="text-align: left;" name="txtName" autofocus></td>
                     </tr>
                     <tr>
-                        <td class="td-1">Email :</td>
+                        <td class="td-1" style="color: #00b4d8;">Email :</td>
                         <td class="td-1"><input   requiredtype="email" style="text-align: left;" name="txtEmail" ></td>
                     </tr>
                     <tr>
-                        <td class="td-1">Branch :</td>
+                        <td class="td-1" style="color: #00b4d8;">Branch :</td>
                         <td class="td-1"><input  required type="text" style="text-align: left;" name="txtbranch" ></td>
                     </tr>
                    
                     
                   
                     <tr>
-                        <td class="td-1">Position :</td>
+                        <td class="td-1" style="color: #00b4d8;">Position :</td>
                         <td class="td-1"><input  required  type="text" style="text-align: left;" name="txtposition" value="<?php echo $pname;?>"></td>
                     </tr>
                    
@@ -110,7 +119,7 @@
         </div>
     </div>
 </section>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
         <hr>
@@ -151,7 +160,7 @@
                               </a>
                           </li>
                       </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
